@@ -1,65 +1,29 @@
-# Brew 0.9
-__A Wordpress starter theme based on Bones and Bootstrap 3__
+# WordPress Theme For Basic WooCommerce Shop Website
+Wordpress theme for a college project incorporating basic WooCommerce configuration, built using a Starter WordPress Theme based on Bones and Bootstrap 3.
 
-Created by **Dan Brown**: http://danvswild.com
-
-[Demo](http://danvswild.com/brew)
-
-![Home Screen](/screenshots/screen1.png)
-
-
-I searched, but I couldn't find a Wordpress starter theme that was based on Bootstrap 3 that I liked.  BREW is just pulling together excellent projects such as bootstrap, wordpress, bones, etc into a simple starter theme.  This is very lightweight with only some very mild CSS changes to make everything look nice out of the box.  My goal is to provide a solid foundation for anyone wanting to develop a wordpress theme with bootstrap.
-
-header screnshot:
-
-![Home Screen](/screenshots/screen2.png)
-
-***
-
-footer screenshot:
-
-![Home Screen](/screenshots/screen3.png)
+This branding, website design and development project was aimed at creating a consistent brand presence through developing a customized WordPress child theme for educational purposes. I developed the theme to be compatible with WooCommerce; the home page utilizes fields accessible through the WordPress interface for user creativity and variability.
 
 Features:
+* Built From Brew Starter Theme Template (http://danvswild.com/brew)
 * LESS
 * Bootstrap 3
 * Bones
-* sidebar and footer widgets
-* Very clean out-of-the-box experience
-* pagination
-* breadcrumbs
-* Font Awesome
-* Redux Options Framework
-* Easy to add metaboxes
+* Basic WooCommerce Compatibility
 
-Updates since v.6:
-* Updated to Bootstrap 3.1
-* Added FitVid to make video embeds responsive
-* Removed SASS for now (need to figure out how to keep it up to date)
-* added author profile box
-* updated default styles
-* organized LESS files
-* Added recommended CSS from wordpress for image alignment, text alignment, etc
-* Updated FontAwesome to v.4
-* Various Bug Fixes
-* Bunch of other stuff I can't remember
-
-
-To use:
+How I began with using Brew:
 1. download zip and upload as wordpress theme.
-2. set your variables at /less/custom-variables.less
-3. add customize and add new LESS files in /less/brew
+2. set variables at /less/custom-variables.less
+3. add customize and add new LESS files according to theme needs
 
 
-To do before v1.0:
-* Combine JS files
-* Look in to combining functions.php/brew.php/bones.php
-* Finalize all included pages/php files.  Not all have been updated.
-* Set up Grunt
+To do before v2.0:
+* Update page comments for code contributions
+* Look in to WooCommerce page template customization further
+* Clean up WordPress templates/files
 
-
-
-Providing credit where credit is due:
+Building on previous credits provided by Dan Brown:
+* [WooCommerce and its Documentation] (https://docs.woocommerce.com/)
+* [Dan Brown WordPress Starter Theme] (http://danvswild.com/brew)
 * [Bootstrap 3](https://github.com/twbs/bootstrap)
 * [Bones](https://github.com/eddiemachado/bones)
 * [Bootstrap Nav Walker](https://github.com/twittem/wp-bootstrap-navwalker) (bootstrap navigation)
@@ -70,3 +34,6 @@ Providing credit where credit is due:
 * [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
 * [Jeredatch](https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress) (Custom metaboxes and fields)
 * [FitVid](https://github.com/davatron5000/FitVids.js) (Making video embeds responsive)
+
+* Images sourced from unsplash.com
+* Content sourced from various online shop websites - thank you!

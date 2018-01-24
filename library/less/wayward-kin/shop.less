@@ -1,0 +1,322 @@
+/******************************************************************
+Site Name: wayward-kin
+Author: Brittany King
+
+Stylesheet: Shop Stylesheet
+
+******************************************************************/
+
+.woocommerce {
+	
+	h1.page-title {
+		text-align: center;
+		// This is specifically for the main product page, to align with all other pages that don't use the woocommerce.php template
+		// ONLY THOSE PAGES SET TO USE THE PRODUCT PAGE
+		// THIS COULD CAUSE ERRORS ON OTHER PAGES IN THE FUTURE ------- Check this in future on shop pages!
+		margin-bottom: 51px;
+		
+	}
+	
+	// Buttons 
+	&#respond input#submit, &.woocommerce a.button, &.woocommerce button.button, &.woocommerce input.button, &#respond input#submit.alt, 
+	&.woocommerce a.button.alt, &.woocommerce button.button.alt, input.button.alt a.checkout-button.button.alt.wc-forward, 
+	&.woocommerce #review_form #respond .form-submit input {
+		.shop-btn;
+		background: #fff;
+	}
+	
+	a.button {
+	&.product_type_simple {
+	.shop-btn;
+}
+	&.wc-backward {
+		.shop-btn;
+	}
+	&.alt {
+	.shop-btn;	
+	}
+}	
+	// Woocommerce Messages
+	.woocommerce-info, .woocommerce-message {
+			border-top: 1px solid @teal;
+			border-top-color: @teal;
+   		 	background: #ffffff;
+			&:before {
+			color: @teal;
+    		background: #ffffff;
+			}
+		}
+	.woocommerce-error {
+			border-top: 1px #b81c23 solid;
+   		 	background: #ffffff;
+		}
+	
+	// Product Page Price
+	
+	.shop-pages-header {
+		background: @teal;
+	}
+	
+	ul.products {
+		li.product {
+			text-align: center;
+			.price {
+				color: @teal;
+			}
+		}
+	}
+	
+	label {
+		font-family: @font-family-serif;
+	}
+	
+	// Woocommerce forms
+	form.checkout_coupon, form.login, form.register {
+		border: none;
+		font-family: @font-family-serif;
+	}
+	
+	.cart-empty, .return-to-shop {
+		text-align: center;
+	}
+	.btn {
+	border-radius: 0px;
+	font-family: @font-family-serif;
+	}
+	
+	input.form-control {
+		border-radius: 0px;
+		font-family: @font-family-serif;
+
+		}
+
+	input.input-text, textarea.input-text, input, textarea#comment {
+		letter-spacing: @letter-spacing-p;
+		font-weight: 300;
+		font-size: @font-size-small;
+		background: #fff;
+		font-family: @font-family-serif;
+		&:focus {
+			color: @teal;
+		}
+	}
+
+	textarea {
+		border: 1px @gray-lighter solid;
+	}
+	
+	input#place_order.button.alt {
+		.shop-btn;
+		margin-top: 30px;
+	}
+
+	
+	div#payment.woocommerce-checkout-payment {
+	background: #fff;
+	ul.payment_methods{
+		border-bottom: 1px @teal solid;
+	}
+	}
+	
+	// Pagination At bottom of Product Page
+	nav.woocommerce-pagination {
+		
+	
+	ul {
+		border: 1px solid @teal;
+		li {
+			border-right: 1px solid @teal;
+			&:last-of-type {
+				border-right: 0px;
+			}
+			span.current {
+				background: lighten(@teal, 50%);
+			}
+			&:hover, &:active, &:focus, &:link {
+					background: lighten(@teal, 50%);
+				}
+		}
+	}
+	}
+	
+	// Checkout Page Form 
+	
+	form .form-row label {
+    line-height: 4;
+	}
+	
+	h3#order_review_heading {
+		margin-top: 30px;
+	}
+	
+	// Order Submitted Result Page - AFTER Checked out
+	p.woocommerce-thankyou-order-received {
+		text-align: center;
+	}
+	
+	ul.woocommerce-thankyou-order-details.order_details {
+		display: flex;
+		justify-content: center;
+	}
+	
+	ul.woocommerce-thankyou-order-details.order_details + div + p {
+		text-align: center; 
+	}
+	
+	
+	// Accounts Page
+	.woocommerce-MyAccount-navigation ul {
+	list-style: none;
+    line-height: 1.9;
+    font-family: @font-family-serif;
+		@media(max-width: @screen-sm-min) {
+			text-align: center;
+			padding-left: 0;
+		}
+		}
+	
+	.woocommerce-MyAccount-content {
+		.edit {
+			font-size: 10px;
+		}
+		.woocommerce-error, .woocommerce-info, .woocommerce-message {
+			border-top: 1px solid @teal;
+   		 	background: #ffffff;
+			&:before {
+			color: @teal;
+    		background: #ffffff;
+			}
+		}
+		fieldset {
+			margin-top: 30px;
+			font-family: @font-family-serif;
+			legend {
+				border-bottom: 1px solid @teal;
+			}
+		}
+			
+		input.button {
+			float: right;
+			margin-top: 20px;
+		}
+		
+		header.woocommerce-Address-title.title {
+			padding-bottom: 15px;
+		}
+		address {
+			line-height: 1.8;
+		}
+		.u-column2.col-2.woocommerce-Address, .u-column1.col-1.woocommerce-Address {
+			float: none;
+			width: 100%;
+		}
+	}
+	
+	
+	// Individual Product Page
+	
+	// Price
+	.woocommerce-Price-amount.amount {
+		color: @teal;
+	}
+	.quantity .qty {
+		height: 38px;
+		border: 2px solid lighten(@teal, 40%);
+	}
+	
+	//Review Form
+	#review_form #respond {
+		margin: 20px;
+		h3 {
+			display: none;
+		}
+		p {
+			margin: 10px 0 10px;
+			.stars a {
+				color: lighten(@teal, 30%);
+			}
+			&.form-submit {
+				float: right;
+			}
+		}
+	}
+	.panel {
+		box-shadow: none;
+		border: none;
+	}
+	.summary {
+		form.cart {
+			margin-top: 2em;
+		}
+		ul {
+		line-height: 28px;
+		}
+		span.posted_in, span.tagged_as {
+			display: inline-block;
+			font-size: @font-size-small;
+		}
+		
+	}
+	img {
+		transition: 0.3s ease-out;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+	
+	div.product .woocommerce-tabs {
+			ul.tabs {
+				li {
+				//border-radius: 0px 0px 0px 0px;
+				}
+			}
+		}
+	
+} // end .woocommerce
+
+// Random Woocommerce Message on Cart Page - When remove very last item from cart - message displays outside of .woocommerce wrapper
+	.woocommerce-message {
+			border-top: 1px solid @teal;
+			border-top-color: @teal;
+   		 	background: #ffffff;
+			&:before {
+			color: @teal;
+    		background: #ffffff;
+			}
+		}
+
+
+
+// Table On Cart Page - DOES NOT WORK INSIDE .woocommerce
+	#main table {
+		
+    border: none;
+    border-collapse: separate;
+    border-left: 0;
+    border-right: 0;
+    border-top: none;
+    font-family: @font-family-serif;
+		
+		th {
+			border-top: none;
+    		border-left: none;
+			vertical-align: baseline;
+		}
+		td {
+			border-top: none;
+    		border-left: none;
+			vertical-align: baseline;
+			padding-top: 15px;
+			&.product-thumbnail img {
+				width: 150px;
+			    padding-top: 15px;
+			}
+			&.product-quantity input {
+				border: none;
+			}
+			&.actions {
+				display: none;
+			}
+			
+	}
+}

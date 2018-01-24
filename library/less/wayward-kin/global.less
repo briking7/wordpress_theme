@@ -1,0 +1,182 @@
+/******************************************************************
+Site Name: BREW
+Author: Dan Brown
+
+Stylesheet: Global Stylesheet
+
+Styles and classes used throughout the entire BREW framework
+
+******************************************************************/
+
+body {
+  padding-top: @navbar-height; // THIS IS IF YOU HAVE top-nav-fixed ENABLED
+	overflow-x: hidden;
+  &.admin-bar .navbar-fixed-top { // THIS FIXES THE TOP NAV WHEN ADMIN BAR IS ENABLED
+  	top: 46px;
+  	@media (min-width: 783px) {
+    	top: 32px;
+ 		}
+ 	}
+}
+
+
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+
+	a {}
+}
+
+h1, .h1 {}
+
+h2, .h2 {}
+
+h3, .h3 {}
+
+body h4, .h4 {
+	line-height: 32px;
+}
+
+body h5, .h5 {
+	line-height: 25px;
+}
+
+// h4 only on pages - "additional info" pages
+#main .page.type-page h4, h5, h6 {
+	color: @teal;
+}
+
+
+.entry-content .byline.col-md-3.col-sm-6.col-xs-12.vcard.post-data-content h5 {
+	color: @text-color;
+}
+
+
+
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	transition: 0.3s ease-out;
+	
+	/* on hover */
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+
+	/* on click */
+	&:active {}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+	}
+}
+
+blockquote {
+    border: none;
+    font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    letter-spacing: 2px;
+    position: relative;
+    text-align: center;
+    padding-top: 10%;
+	padding-bottom: 10%;
+    max-width: 80%;
+	margin: auto;
+    font-size: 24px;
+    z-index: 1;
+	
+	@media (max-width: 992px) {
+		padding-top: 10%;
+    	font-size: 22px;
+	}
+}
+
+blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 300px;
+    position: absolute;
+    left: -44px;
+    top: -90px;
+    color: #499494;
+    opacity: 0.30;
+    z-index: -1;
+	@media (max-width: 992px) {
+		top: -100px;
+		left: -35px;
+	}
+	@media (max-width: 767px) {
+    	top: -130px;
+		left: -35px;
+
+	}
+}
+
+.entry-content blockquote p {
+		font-size: 24px;
+	@media (max-width: 992px) {
+		font-size: 22px;
+
+	}
+	}
+
+//
+//
+//blockquote {
+//		border: none;
+//		font-family: @font-family-serif;
+//		font-style: italic;
+//		letter-spacing: 2px;
+//		position: relative;
+//		text-align: center;
+//		padding-top: 46%;
+//		max-width: 385px;
+//		font-size: 24px;
+//		@media(max-width:@screen-md-min) {
+//			padding-top: 35%;
+//			font-size: 22px;
+//		}
+//		@media(max-width:@screen-sm-min) {
+//			padding-top: 0;
+//			max-width: none;
+//			font-size: 18px;
+//		}
+//		&:before {
+//				display: block;
+//				content: "\201C";
+//				font-size: 200px;
+//				position: absolute;
+//				left: -35px;
+//				top: 105px;
+//				color: @teal;
+//				opacity: 0.70;
+//				z-index: -1;
+//		@media(max-width:@screen-lg-min) {
+//		top: 68px;
+//		}
+//		@media(max-width:@screen-md-min) {
+//		top: -16px;
+//		}
+//		@media(max-width:@screen-sm-min) {
+//		top: -95px;
+//			left: -20px;
+//			font-size: 150px;
+//		}
+//			@media(max-width:@screen-xs-min) {
+//			top: -85px;
+//			left: -20px;
+//			font-size: 150px;
+//		}
+//			 }
+//

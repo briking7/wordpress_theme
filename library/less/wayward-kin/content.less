@@ -1,0 +1,440 @@
+/******************************************************************
+Site Name: Wayward Kin
+Author: Brittany King
+
+Stylesheet: Content Styles
+
+These are the styles for posts, pages, archive, & blog index
+
+
+
+------------ MAP ------------
+
+01. #CONTENT & #MAIN WRAPPERS 
+02. ARTICLE WRAPPER
+03. ENTRY/PAGE HEADER
+04. FEATURED IMAGE
+05. ENTRY/PAGE CONTENT
+06. ENTRY/PAGE FOOTER
+
+******************************************************************/
+
+
+/*******************************
+01. #CONTENT & #MAIN WRAPPERS
+(#content usually includes sidebar.
+#main is all post/entry/page content)
+********************************/
+.content-wrapper {
+	padding-top: 6%;
+	@media (max-width: @screen-sm-min) {
+			padding-top: 8%;
+			padding-left: 20px;
+			padding-right: 20px;
+
+	}
+	&.single-page-wrapper {
+		padding-top: 0px;
+		#sidebar {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+}
+
+
+
+#content, .content {
+  padding-top: 40px;
+  min-height: 600px;
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0px;
+	}
+	
+}
+
+a {
+	transition: 0.3s ease-in-out;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+}
+
+/*******************************
+02. ARTICLE WRAPPER
+(background, borders etc for individual posts/pages)
+********************************/
+
+
+.hentry {
+  margin: 0 0 20px 0;
+  border-radius: 0px;
+  background: #fff;
+  border: none;
+}
+
+/*******************************
+03. ENTRY HEADER
+********************************/
+
+// all headers
+.article-header {
+  margin-bottom: 15px;
+  padding: 20px 20px 0;
+  h1, h2, h3, h4, h5, h6 {
+	  margin-top: 0;
+	}
+}
+
+// specific headers
+
+.products-page-header {
+	@media(max-width: @screen-sm-min) {
+		padding-top: 50px;
+	}
+}
+
+
+
+// titles
+.entry-title {
+  margin: 0 0 5px;
+  font-weight: 400;
+  line-height: 1.2;
+	
+	h1 {
+		font-size: 28px;
+  @media (min-width: @screen-md) {
+    font-size: 38px;
+  }
+	}
+	
+	.post-title.entry-title {
+		font-size: 24px;
+  @media (min-width: @screen-md) {
+    font-size: 34px;
+  }
+	}
+  a { 
+	  &:visited{
+		  
+	color: @gray-dark; 
+  	transition: color .2s ease;
+	  }  
+  	
+	  
+	  
+  }
+  a:active { 
+    //color: #888;
+    
+  }
+}
+
+
+
+///want to style individual post classes? Booya!
+.post-id {}         /* post by id (i.e. post-3) */
+.post {}            /* general post style */
+.page {}            /* general article on a page style */
+.attachment {}      /* general style on an attatchment */
+.sticky {}          /* sticky post style */
+.hentry {}          /* hentry class */
+.category-slug {}   /* style by category (i.e. category-videos) */
+.tag-slug {}        /* style by tag (i.e. tag-news) */
+.sticky-ind {
+  display: none;
+}
+.sticky .sticky-ind {display:inline !important;}
+
+
+/*******************************
+04. FEATURED IMAGE
+********************************/
+
+.featured-content {
+  margin-bottom: 20px;
+}
+
+
+.featured-img-bg {
+  height: 300px;
+  background-width: 100% !important;
+  background-size: cover !important;
+  background-repeat: none !important;
+  background-position: center center !important;
+}
+
+.featured-img { 
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+/*******************************
+05. ENTRY CONTENT
+********************************/
+
+// content row
+.post-content-row {
+	  margin-bottom: 15px;
+  	padding: 20px 20px 0;
+	
+	.post-data-content, .post-data-image{
+		margin-bottom: 15px;
+		
+	}
+}
+
+// all content
+.entry-content {
+	padding: 20px 20px 0;
+
+	
+  .byline.col-md-3.col-sm-6.col-xs-12.vcard.post-data-content {
+    color: @gray;
+    margin: 0;
+    font-size: 14px !important;
+    time {}
+    }	
+	
+  p {
+	padding: 0 10px 0 0;
+    margin-bottom: 20px;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+	display: block;
+	letter-spacing: @letter-spacing-p;
+	  @media (max-width: @screen-sm-min) {
+		  //display: inline;
+	  }
+  }
+	
+	
+  > ol, > ul {
+    margin: 0 0 20px 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  blockquote {
+    &:before {}
+  }
+
+ 
+  dd {
+    margin-left: 0;
+    font-size: 0.9em;
+    color: @brand-info;
+    margin-bottom: 1.5em;
+  }
+
+  .alignleft, img.alignleft {}
+  .alignright, img.alignright {}
+  .aligncenter, img.aligncenter {}
+
+  video, object {
+    max-width: 100%;
+    height: auto;
+  }
+
+  pre {
+    background: #eee;
+    border: 1px solid #cecece;
+    padding: 10px;
+  }
+
+} /* end entry-content */
+
+// specific titles
+.article-header {
+	display: none;
+}
+.single-title {}
+.page-title {}
+.archive-title { 
+  margin-top: 0;
+}
+
+
+
+// thumbnail content
+
+.thumbnail-wrapper img {
+	transition: 1s ease;
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+// image galleries
+
+.gallery {
+  dl {
+    a {}
+    img {}
+  }
+  dt {}
+  dd {}
+}
+
+// gallery caption styles
+.gallery-caption {}
+
+// target specific image sizes
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+
+
+
+
+
+/*******************************
+06. ENTRY FOOTER
+********************************/
+
+// loop footer + single footer
+.article-footer  {
+  padding: 10px 20px 10px;
+  //border-top: 1px solid #eee;
+  color: @gray;
+  font-size: 12px;
+  .commentnum {
+  	text-align: right;
+  	width: 30%;
+  	a {
+    	text-decoration: none;
+    	color: @gray-light;
+    	transition: 1s ease;
+  	}
+  	a:hover {
+    	color: @gray-dark;
+		text-decoration: none;
+  	}
+  }
+  .tags {
+  	width: 70%;
+  }
+  .post-link {
+  	margin-top: -1px;
+  	padding-left: 10px;
+	transition: 1s linear;
+  	&:hover {
+    	text-decoration: none;
+  	}
+  }
+}
+
+/*******************************
+07. COMMENT RELATED / POSTS CONTENT
+********************************/
+
+#single-post-nav {
+	margin: 20px 0 75px;
+
+	.pager {
+	
+	a {
+		color: @teal;
+	}
+	 span.next-page, span.previous-page {
+	    color: @teal;
+    border: solid 1px @teal;
+    border-radius: 0px;
+    font-family: @font-family-serif;
+    background: #fff;
+	transition: 1s linear;
+		 a {
+			transition: 1s linear; 
+		 }
+	&:hover {
+		a {
+			color: #fff;
+		}
+		    
+    background: @teal;
+	}
+}
+}
+	}
+
+/*******************************
+08. EXTRAS
+********************************/
+
+// Submit and Search Buttons - NOT within Woocommerce pages
+
+input.btn.btn-primary, .btn.btn-primary {
+	.shop-btn;
+	
+}
+
+input#search.form-control {
+	font-family: @font-family-serif;
+	border-radius: 0px;
+}
+
+
+// Global Comment and Respond Forms
+#comments, .respond-form {
+	margin: 0 0 20px 0;
+    border-radius: 0px;
+	background: #fff;
+	border: none;
+	box-shadow: none;
+}
+
+// Comment Respond Form
+.respond-form {
+
+	//background: lighten(@teal, 35%);
+	h3 {
+		text-align: center;
+	}
+	p {
+		font-size: small;
+		text-align: right;
+	}
+	textarea#comment {
+		border: solid 1px @teal;
+		background: #fff;
+		font-family: @font-family-serif;
+		font-size: medium;
+	}
+}
+
+// User's Comment Display Form
+#comments {
+	padding: 0px 20px;
+	h3 {
+		text-align: center;
+	}
+	.comment-author img {
+				border: none;
+			}
+	.comment-container {
+		background: #fff;
+	}
+	.comment-content {
+		font-size: small;
+		.comment_content {
+			font-family: @font-family-serif;
+			
+		}
+	}
+	
+	.comment-reply-link {
+	.shop-btn;
+}
+}

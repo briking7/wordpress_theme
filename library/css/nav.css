@@ -1,0 +1,24 @@
+/******************************************************************
+Site Name: BREW
+Author: Dan Brown
+
+Stylesheet: Header & Navigation
+
+******************************************************************/
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+.header .navbar.navbar-fixed-top {
+  background-color: #fff;
+  opacity: 0.7;
+}
+.nav {
+  /* end .menu li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* end .nav */

@@ -1,0 +1,35 @@
+.shop-btn {
+  color: #499494;
+  background: #fff;
+  border: solid 1px #499494;
+  border-radius: 0px;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  transition: 1s linear;
+}
+.shop-btn:hover {
+  color: #fff;
+  background: #418383;
+  border: solid 1px #499494;
+}
+.blog-breadcrumb {
+  padding: 4px 17px;
+  background: rgba(255, 255, 255, 0);
+}
+.blog-breadcrumb li {
+  font-size: 16px;
+  display: inline-block;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+.blog-breadcrumb li + li:before {
+  content: " |";
+}
+.blog-breadcrumb li a {
+  text-decoration: none;
+  color: #999999;
+}
+.blog-breadcrumb li a:hover,
+.blog-breadcrumb li a:focus,
+.blog-breadcrumb li a:active {
+  color: #3c7979;
+}

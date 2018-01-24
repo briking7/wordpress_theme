@@ -1,0 +1,203 @@
+/******************************************************************
+Site Name: wayward-kin
+Author: Brittany King
+
+Stylesheet: Header & Navigation
+
+******************************************************************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+// BODY
+
+body {
+	padding-top: 0px;
+	
+	h1, h2 {
+		letter-spacing: @letter-spacing-h-large;
+	}
+	
+	h3, h4, h5, h6 {
+		letter-spacing: @letter-spacing-h;
+	}
+	p, a {
+		letter-spacing: @letter-spacing-p;
+	}
+	
+
+}
+
+// WooCommerce Global
+
+	.woocommerce {
+		
+		a.remove {
+		border: #000;
+		color: @teal!important;
+		font-weight: 400;
+		&:hover {
+				border: 1px solid @teal;
+				border-radius: 100%;
+			    color: @teal!important;
+    			background: #fff;
+		}
+	}
+		.woocommerce-message {
+		border-top: 1px solid @brand-primary;
+		background: lighten(@teal, 60%);
+		&:before {
+		letter-spacing: @letter-spacing-p;
+		font-weight: 300;
+		font-size: @font-size-small;
+		color: @teal;
+	}
+}
+}
+
+// HEADER
+.site-nav {
+
+	#logo {}
+
+	.navbar.navbar-fixed-top {
+		
+	background-color: #fff;
+	opacity: 0.7;
+	box-shadow: 0px 0px 1px 1px #888;
+		
+		@media (max-width: @screen-sm-min) {
+			
+			opacity: 1.0;
+		}
+		
+		// Wayward Kin Apparel Heading
+		a.navbar-brand {
+			font-family: @wayward-kin;
+			font-weight: 700;
+			text-transform: lowercase;
+			//color: darken(@secondary, 15%);
+		}
+	}
+	
+	.navbar-toggle{
+		background-color: transparent;
+		.icon-bar{
+			background: @teal;
+		}
+	}
+	.navbar-collapse.collapse.navbar-responsive-collapse{
+		max-height: none;
+		
+		// Navigation Social Icons
+		#menu-social.navbar-collapse.collapse.navbar-responsive-collapse {
+			
+			@media(max-width: @screen-sm-min) {
+				padding: 0;
+			}
+			ul li{
+			display: inline-block;
+			list-style: none;
+			}
+			
+		}
+		
+		@media(max-width: @screen-sm-min) {
+			
+		
+		ul {
+				li {
+					a {
+					text-decoration: none;	
+					
+					&:hover {
+						background: lighten(@teal, 20%);
+						opacity: 0.70;
+						color: #fff;
+					}
+				}
+			}
+		}
+		}
+		
+	}
+	
+}
+
+// NAVIGATION
+// you may need to replace .nav with: .navbar-nav (and possibly include .navbar-inverse)
+
+.navbar {
+	// Shop Link When Dropdown Menu Active
+	.open > a, .nav .open > a:hover, .nav .open > a:focus {
+		color: #fff;
+		background: lighten(@teal, 20%);
+		
+	}
+	.dropdown.open {
+		li a {
+			// Dropdown Menu
+			&:hover {
+				color: @teal;
+			}
+		}
+	}
+
+	li {
+
+		a {
+			
+			&:hover, &:focus {
+				
+				background: @background-light;
+
+			}
+			
+			&:active {
+				background: @teal;
+				color: lighten(@teal, 50%);
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+		ul.sub-menu,
+		ul.children {
+
+			li {
+
+				a {
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+				}
+
+				&:first-child {}
+
+				&:last-child {}
+
+			}
+
+		}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+
+		a {}
+
+	}  /* end current highlighters */
+
+} /* end .nav */
